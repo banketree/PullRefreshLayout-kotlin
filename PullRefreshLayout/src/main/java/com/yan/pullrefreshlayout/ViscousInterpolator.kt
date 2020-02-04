@@ -44,6 +44,6 @@ class ViscousInterpolator @JvmOverloads constructor(private val currentViscousSc
         /**
          * Controls the viscous fluid effect (how much of it).
          */
-        private val VISCOUS_FLUID_SCALE = 4.5f
+        private const val VISCOUS_FLUID_SCALE = 4.5f
     }
 }
