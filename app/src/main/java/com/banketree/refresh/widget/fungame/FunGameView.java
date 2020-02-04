@@ -10,10 +10,9 @@ import android.view.WindowManager;
 
 import androidx.core.content.ContextCompat;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
-
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * Created by Hitomis on 2016/3/9.
@@ -137,19 +136,19 @@ public abstract class FunGameView extends FunGameHeader {
         switch (status) {
             case STATUS_GAME_PREPAR:
             case STATUS_GAME_PLAY:
-                textPaint.setTextSize(dipToPx(getContext(),25));
+                textPaint.setTextSize(PRLCommonUtils.INSTANCE.dipToPx(getContext(),25));
                 promptText(canvas, textLoading, width, height);
                 break;
             case STATUS_GAME_FINISHED:
-                textPaint.setTextSize(dipToPx(getContext(),20));
+                textPaint.setTextSize(PRLCommonUtils.INSTANCE.dipToPx(getContext(),20));
                 promptText(canvas, textLoadingFinished, width, height);
                 break;
             case STATUS_GAME_FAIL:
-                textPaint.setTextSize(dipToPx(getContext(),20));
+                textPaint.setTextSize(PRLCommonUtils.INSTANCE.dipToPx(getContext(),20));
                 promptText(canvas, textLoadingFail, width, height);
                 break;
             case STATUS_GAME_OVER:
-                textPaint.setTextSize(dipToPx(getContext(),25));
+                textPaint.setTextSize(PRLCommonUtils.INSTANCE.dipToPx(getContext(),25));
                 promptText(canvas, textGameOver, width, height);
                 break;
         }

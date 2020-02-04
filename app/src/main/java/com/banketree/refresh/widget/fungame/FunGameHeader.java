@@ -16,11 +16,11 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * 游戏 header
@@ -72,7 +72,7 @@ public class FunGameHeader extends FunGameBase {
         topMaskView = createMaskTextView(context, topMaskViewText, topMaskTextSize, Gravity.BOTTOM);
         bottomMaskView = createMaskTextView(context, bottomMaskViewText, bottomMaskTextSize, Gravity.TOP);
 
-        DIVIDING_LINE_SIZE = Math.max(1, dipToPx(getContext(), 0.5f));
+        DIVIDING_LINE_SIZE = Math.max(1, PRLCommonUtils.INSTANCE.dipToPx(getContext(), 0.5f));
         post(new Runnable() {
             @Override
             public void run() {

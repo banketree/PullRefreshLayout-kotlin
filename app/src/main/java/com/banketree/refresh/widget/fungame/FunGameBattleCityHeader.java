@@ -6,13 +6,13 @@ import android.graphics.Point;
 import android.graphics.RectF;
 import android.util.SparseArray;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
 
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * Created by Hitomis on 2016/3/09.
@@ -151,8 +151,8 @@ public class FunGameBattleCityHeader extends FunGameView {
         status = FunGameView.STATUS_GAME_PREPAR;
         controllerPosition = DIVIDING_LINE_SIZE;
 
-        enemySpeed = dipToPx(getContext(), 1);
-        bulletSpeed = dipToPx(getContext(), 4);
+        enemySpeed = PRLCommonUtils.INSTANCE.dipToPx(getContext(), 1);
+        bulletSpeed = PRLCommonUtils.INSTANCE.dipToPx(getContext(), 4);
 
         levelNum = DEFAULT_TANK_MAGIC_TOTAL_NUM;
         wipeOutNum = 0;
@@ -260,8 +260,8 @@ public class FunGameBattleCityHeader extends FunGameView {
      */
     private void upLevel() {
         levelNum += DEFAULT_TANK_MAGIC_TOTAL_NUM;
-        enemySpeed += dipToPx(getContext(), 1);
-        bulletSpeed += dipToPx(getContext(), 1);
+        enemySpeed += PRLCommonUtils.INSTANCE.dipToPx(getContext(), 1);
+        bulletSpeed += PRLCommonUtils.INSTANCE.dipToPx(getContext(), 1);
         wipeOutNum = 0;
 
         if (enemyTankSpace > 12)

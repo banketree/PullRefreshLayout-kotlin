@@ -13,10 +13,9 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.widget.pathview.PathsDrawable;
-
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * Phoenix
@@ -98,12 +97,12 @@ public class PhoenixHeader extends View
 
   private void initView(Context context, AttributeSet attrs) {
     mMatrix = new Matrix();
-    mSunSize = dipToPx(context, 40);
+    mSunSize = PRLCommonUtils.INSTANCE.dipToPx(context, 40);
     setupAnimation();
     setupPathsDrawable();
-    setMinimumHeight(dipToPx(context, 100));
-    pullRefreshLayout.setRefreshTriggerDistance(dipToPx(context, 100));
-    pullRefreshLayout.setPullDownMaxDistance(dipToPx(context, 150));
+    setMinimumHeight(PRLCommonUtils.INSTANCE.dipToPx(context, 100));
+    pullRefreshLayout.setRefreshTriggerDistance(PRLCommonUtils.INSTANCE.dipToPx(context, 100));
+    pullRefreshLayout.setPullDownMaxDistance(PRLCommonUtils.INSTANCE.dipToPx(context, 150));
     int primaryColor = 0;
     int accentColor = 0;
     if (primaryColor != 0) {

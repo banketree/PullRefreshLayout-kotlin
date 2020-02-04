@@ -41,9 +41,10 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
+
 import java.util.ArrayList;
 
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * Fancy progress indicator for Material theme.
@@ -164,9 +165,9 @@ public class MaterialProgressDrawable extends Drawable implements Animatable {
     }
 
     private void setUp(final double diameter) {
-        final int shadowYOffset = dipToPx(mParent.getContext(), Y_OFFSET);
-        final int shadowXOffset = dipToPx(mParent.getContext(), X_OFFSET);
-        int mShadowRadius = dipToPx(mParent.getContext(), SHADOW_RADIUS);
+        final int shadowYOffset = PRLCommonUtils.INSTANCE.dipToPx(mParent.getContext(), Y_OFFSET);
+        final int shadowXOffset = PRLCommonUtils.INSTANCE.dipToPx(mParent.getContext(), X_OFFSET);
+        int mShadowRadius = PRLCommonUtils.INSTANCE.dipToPx(mParent.getContext(), SHADOW_RADIUS);
         OvalShape oval = new OvalShadow(mShadowRadius, (int) diameter);
         mShadow = new ShapeDrawable(oval);
         if (Build.VERSION.SDK_INT >= 11) {

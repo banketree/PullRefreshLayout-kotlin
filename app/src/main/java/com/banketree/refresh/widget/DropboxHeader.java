@@ -19,11 +19,11 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.ColorUtils;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
 import com.banketree.refresh.widget.pathview.PathsDrawable;
 
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * DropboxRefresh
@@ -79,7 +79,7 @@ public class DropboxHeader extends View implements PullRefreshLayout.OnPullListe
         mPaint.setAntiAlias(true);
         mAccentColor = ContextCompat.getColor(context, R.color.colorWhite);
         setBackgroundColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-        setMinimumHeight(dipToPx(getContext(),150));
+        setMinimumHeight(PRLCommonUtils.INSTANCE.dipToPx(getContext(),150));
 
         PathsDrawable drawable1 = new PathsDrawable();
         drawable1.parserPaths(

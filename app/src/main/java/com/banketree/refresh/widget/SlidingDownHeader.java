@@ -7,11 +7,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.pullrefreshlayout.ViscousInterpolator;
 import com.banketree.refresh.App;
-
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * Created by yan on 2017/9/16.
@@ -23,7 +22,7 @@ public class SlidingDownHeader extends NestedFrameLayout
   private PullRefreshLayout pullRefreshLayout;
   private View targetView;
 
-  private final int SLIDING_OFFSET = dipToPx(App.getAppContext(), 60);
+  private final int SLIDING_OFFSET = PRLCommonUtils.INSTANCE.dipToPx(App.getAppContext(), 60);
   private final int SLIDING_DURING = 400;
 
   private boolean isSlidingDown;

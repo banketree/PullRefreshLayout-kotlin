@@ -8,12 +8,11 @@ import android.util.AttributeSet;
 
 import androidx.core.graphics.ColorUtils;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * Created by Hitomis on 2016/2/29.
@@ -95,11 +94,11 @@ public class FunGameHitBlockHeader extends FunGameView {
 
   private void initView(Context context, AttributeSet attrs) {
     blockHorizontalNum = BLOCK_HORIZONTAL_NUM;
-    speed = dipToPx(getContext(), SPEED);
+    speed = PRLCommonUtils.INSTANCE.dipToPx(getContext(), SPEED);
 
     blockPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     blockPaint.setStyle(Paint.Style.FILL);
-    BALL_RADIUS = dipToPx(getContext(), 4);
+    BALL_RADIUS = PRLCommonUtils.INSTANCE.dipToPx(getContext(), 4);
   }
 
   @Override

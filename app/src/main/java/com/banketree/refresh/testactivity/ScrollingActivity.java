@@ -11,17 +11,15 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.refresh.R;
 import com.banketree.refresh.widget.house.StoreHouseHeader;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 
 import java.util.ArrayList;
-
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 public class ScrollingActivity extends BaseActivity {
     private static final String TAG = "NestedActivity";
@@ -73,7 +71,7 @@ public class ScrollingActivity extends BaseActivity {
         this.refreshLayout = findViewById(R.id.refreshLayout);
         findViewById(R.id.container).setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.colorPrimaryDark));
         StoreHouseHeader header = new StoreHouseHeader(getBaseContext());
-        header.setPadding(0, dipToPx(getApplicationContext(), 20), 0, dipToPx(getApplicationContext(), 20));
+        header.setPadding(0, PRLCommonUtils.INSTANCE.dipToPx(getApplicationContext(), 20), 0, PRLCommonUtils.INSTANCE.dipToPx(getApplicationContext(), 20));
         header.initWithString("PullRefreshLayout");
         refreshLayout.setHeaderView(header);
 
@@ -101,12 +99,12 @@ public class ScrollingActivity extends BaseActivity {
             @Override
             public boolean onScrollUpAbleCheck() {
                 int appbarOffset = ((appBar.getTag() instanceof Integer)) ? (int) appBar.getTag() : 0;
-                return PRLCommonUtils.canChildScrollUp(refreshLayout.getTargetView()) || appbarOffset != 0;
+                return PRLCommonUtils.INSTANCE.canChildScrollUp(refreshLayout.getTargetView()) || appbarOffset != 0;
             }
 
             @Override
             public boolean onScrollDownAbleCheck() {
-                return PRLCommonUtils.canChildScrollDown(refreshLayout.getTargetView());
+                return PRLCommonUtils.INSTANCE.canChildScrollDown(refreshLayout.getTargetView());
             }
         });
     }

@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
 import com.banketree.refresh.widget.pathview.PathsDrawable;
@@ -29,7 +30,6 @@ import java.util.List;
 import java.util.Locale;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * 经典下拉头部
@@ -71,7 +71,7 @@ public class ClassicsHeader extends NestedRelativeLayout implements PullRefreshL
     }
 
     protected void initView(Context context, AttributeSet attrs) {
-        setMinimumHeight(dipToPx(getContext(), 80));
+        setMinimumHeight(PRLCommonUtils.INSTANCE.dipToPx(getContext(), 80));
 
         LinearLayout layout = new LinearLayout(context);
         layout.setId(android.R.id.widget_frame);
@@ -96,8 +96,8 @@ public class ClassicsHeader extends NestedRelativeLayout implements PullRefreshL
 
         mProgressView = new ImageView(context);
         mProgressView.animate().setInterpolator(new LinearInterpolator());
-        LayoutParams lpProgress = new LayoutParams(dipToPx(getContext(), 20), dipToPx(getContext(), 20));
-        lpProgress.rightMargin = dipToPx(getContext(), 20);
+        LayoutParams lpProgress = new LayoutParams(PRLCommonUtils.INSTANCE.dipToPx(getContext(), 20), PRLCommonUtils.INSTANCE.dipToPx(getContext(), 20));
+        lpProgress.rightMargin = PRLCommonUtils.INSTANCE.dipToPx(getContext(), 20);
         lpProgress.addRule(CENTER_VERTICAL);
         lpProgress.addRule(LEFT_OF, android.R.id.widget_frame);
         addView(mProgressView, lpProgress);

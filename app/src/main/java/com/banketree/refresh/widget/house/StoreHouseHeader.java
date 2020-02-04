@@ -9,12 +9,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Transformation;
 
+import com.banketree.pullrefreshlayout.PRLCommonUtils;
 import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.widget.NestedFrameLayout;
 
 import java.util.ArrayList;
 
-import static com.banketree.pullrefreshlayout.PRLCommonUtils.dipToPx;
 
 /**
  * from https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh
@@ -65,8 +65,8 @@ public class StoreHouseHeader extends NestedFrameLayout implements PullRefreshLa
 
     private void initView() {
         setWillNotDraw(false);
-        mLineWidth = (int) dipToPx(getContext(),1);
-        mDropHeight = (int) dipToPx(getContext(),40);
+        mLineWidth = (int) PRLCommonUtils.INSTANCE.dipToPx(getContext(),1);
+        mDropHeight = (int) PRLCommonUtils.INSTANCE.dipToPx(getContext(),40);
         mHorizontalRandomness = getContext().getResources().getDisplayMetrics().widthPixels / 2;
     }
 
@@ -116,11 +116,11 @@ public class StoreHouseHeader extends NestedFrameLayout implements PullRefreshLa
     }
 
     private int getTopOffset() {
-        return (int) (getPaddingTop() + dipToPx(getContext(),10));
+        return (int) (getPaddingTop() + PRLCommonUtils.INSTANCE.dipToPx(getContext(),10));
     }
 
     private int getBottomOffset() {
-        return (int) (getPaddingBottom() + dipToPx(getContext(),10));
+        return (int) (getPaddingBottom() + PRLCommonUtils.INSTANCE.dipToPx(getContext(),10));
     }
 
     public void initWithString(String str) {
@@ -162,8 +162,8 @@ public class StoreHouseHeader extends NestedFrameLayout implements PullRefreshLa
         mItemList.clear();
         for (int i = 0; i < pointList.size(); i++) {
             float[] line = pointList.get(i);
-            PointF startPoint = new PointF(dipToPx(getContext(),line[0]) * mScale, dipToPx(getContext(),line[1]) * mScale);
-            PointF endPoint = new PointF(dipToPx(getContext(),line[2]) * mScale, dipToPx(getContext(),line[3]) * mScale);
+            PointF startPoint = new PointF(PRLCommonUtils.INSTANCE.dipToPx(getContext(),line[0]) * mScale, PRLCommonUtils.INSTANCE.dipToPx(getContext(),line[1]) * mScale);
+            PointF endPoint = new PointF(PRLCommonUtils.INSTANCE.dipToPx(getContext(),line[2]) * mScale, PRLCommonUtils.INSTANCE.dipToPx(getContext(),line[3]) * mScale);
 
             drawWidth = Math.max(drawWidth, startPoint.x);
             drawWidth = Math.max(drawWidth, endPoint.x);
