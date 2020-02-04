@@ -8,9 +8,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
+import com.banketree.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
 import com.wang.avi.AVLoadingIndicatorView;
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
 
 /**
  * Created by Administrator on 2017/7/16 0016.
