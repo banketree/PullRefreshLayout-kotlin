@@ -10,8 +10,8 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
-import com.banketree.pullrefreshlayout.ShowGravity;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.ShowGravity;
 import com.banketree.refresh.R;
 import com.banketree.refresh.widget.SlidingDownHeader;
 

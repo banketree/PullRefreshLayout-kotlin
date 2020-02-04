@@ -41,7 +41,7 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
+import com.yan.pullrefreshlayout.PRLCommonUtils;
 
 import java.util.ArrayList;
 

@@ -18,8 +18,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.PRLCommonUtils;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
 import com.banketree.refresh.widget.pathview.PathsDrawable;
 

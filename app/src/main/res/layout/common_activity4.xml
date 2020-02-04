@@ -31,7 +31,7 @@
         android:orientation="horizontal">
 
 
-        <com.banketree.pullrefreshlayout.PullRefreshLayout
+        <com.yan.pullrefreshlayout.PullRefreshLayout
             android:id="@+id/refreshLayout1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,9 +42,9 @@
                 android:id="@+id/lv_data"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </com.banketree.pullrefreshlayout.PullRefreshLayout>
+        </com.yan.pullrefreshlayout.PullRefreshLayout>
 
-        <com.banketree.pullrefreshlayout.PullRefreshLayout
+        <com.yan.pullrefreshlayout.PullRefreshLayout
             android:id="@+id/refreshLayout2"
             android:overScrollMode="never"
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 android:overScrollMode="never"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </com.banketree.pullrefreshlayout.PullRefreshLayout>
+        </com.yan.pullrefreshlayout.PullRefreshLayout>
     </LinearLayout>
 
 

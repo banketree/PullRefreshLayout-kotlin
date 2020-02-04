@@ -1,11 +1,10 @@
-package com.banketree.pullrefreshlayout
+package com.yan.pullrefreshlayout
 
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
 import android.content.Context
-import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -26,6 +25,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.widget.ListViewCompat
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
+import com.banketree.pullrefreshlayout.R
 
 /**
  * @author yanxianwei
@@ -426,7 +426,9 @@ class PullRefreshLayout @JvmOverloads constructor(context: Context, attrs: Attri
     }
 
     private fun loadAttribute(context: Context, attrs: AttributeSet?) {
-        val ta = context.obtainStyledAttributes(attrs, R.styleable.PullRefreshLayout)
+        val ta = context.obtainStyledAttributes(attrs,
+            R.styleable.PullRefreshLayout
+        )
         isRefreshEnable =
             ta.getBoolean(R.styleable.PullRefreshLayout_prl_refreshEnable, isRefreshEnable)
         isLoadMoreEnable =
@@ -481,13 +483,22 @@ class PullRefreshLayout @JvmOverloads constructor(context: Context, attrs: Attri
         )
         bottomOverScrollMaxTriggerOffset = ta.getDimensionPixelOffset(
             R.styleable.PullRefreshLayout_prl_downOverScrollMaxTriggerOffset,
-            PRLCommonUtils.dipToPx(context, bottomOverScrollMaxTriggerOffset)
+            PRLCommonUtils.dipToPx(
+                context,
+                bottomOverScrollMaxTriggerOffset
+            )
         )
 
         showGravity.headerShowGravity =
-            ta.getInteger(R.styleable.PullRefreshLayout_prl_headerShowGravity, ShowGravity.FOLLOW)
+            ta.getInteger(
+                R.styleable.PullRefreshLayout_prl_headerShowGravity,
+                ShowGravity.FOLLOW
+            )
         showGravity.footerShowGravity =
-            ta.getInteger(R.styleable.PullRefreshLayout_prl_footerShowGravity, ShowGravity.FOLLOW)
+            ta.getInteger(
+                R.styleable.PullRefreshLayout_prl_footerShowGravity,
+                ShowGravity.FOLLOW
+            )
 
         targetViewId = ta.getResourceId(R.styleable.PullRefreshLayout_prl_targetId, targetViewId)
 
@@ -1064,7 +1075,10 @@ class PullRefreshLayout @JvmOverloads constructor(context: Context, attrs: Attri
     }
 
     private fun getOverScrollTime(distance: Int): Long {
-        val ratio = Math.abs(distance.toFloat() / PRLCommonUtils.getWindowHeight(context))
+        val ratio = Math.abs(distance.toFloat() / PRLCommonUtils.getWindowHeight(
+            context
+        )
+        )
         return Math.max(
             overScrollMinDuring.toLong(),
             (Math.pow((2000 * ratio).toDouble(), 0.44) * overScrollAdjustValue).toLong()
@@ -1468,7 +1482,8 @@ class PullRefreshLayout @JvmOverloads constructor(context: Context, attrs: Attri
         fun onLoading()
     }
 
-    open class OnRefreshListenerAdapter : OnRefreshListener {
+    open class OnRefreshListenerAdapter :
+        OnRefreshListener {
         override fun onRefresh() {}
 
         override fun onLoading() {}

@@ -1,4 +1,4 @@
-package com.banketree.pullrefreshlayout
+package com.yan.pullrefreshlayout
 
 
 import android.content.Context
@@ -6,7 +6,6 @@ import android.view.MotionEvent
 import android.view.VelocityTracker
 import android.view.ViewConfiguration
 import android.view.ViewGroup
-import android.view.ViewParent
 
 /**
  * support general view to pull refresh

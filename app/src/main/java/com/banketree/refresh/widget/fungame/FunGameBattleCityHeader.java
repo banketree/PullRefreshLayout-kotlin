@@ -6,8 +6,8 @@ import android.graphics.Point;
 import android.graphics.RectF;
 import android.util.SparseArray;
 
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.PRLCommonUtils;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -7,9 +7,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
-import com.banketree.pullrefreshlayout.ViscousInterpolator;
+import com.yan.pullrefreshlayout.PRLCommonUtils;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.ViscousInterpolator;
 import com.banketree.refresh.App;
 
 /**

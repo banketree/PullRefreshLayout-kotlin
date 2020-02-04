@@ -9,8 +9,8 @@ import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
-import com.banketree.pullrefreshlayout.ShowGravity;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.ShowGravity;
 import com.banketree.refresh.R;
 import com.banketree.refresh.widget.HeaderOrFooter;
 import com.banketree.refresh.widget.TwoRefreshHeader;

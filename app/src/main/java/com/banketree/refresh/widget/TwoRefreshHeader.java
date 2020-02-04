@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
-import com.banketree.pullrefreshlayout.ViscousInterpolator;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.ViscousInterpolator;
 import com.banketree.refresh.OptionActivity;
 import com.banketree.refresh.R;
 

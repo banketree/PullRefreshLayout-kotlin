@@ -7,8 +7,8 @@ import android.view.View;
 
 import androidx.core.view.ViewCompat;
 
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
-import com.banketree.pullrefreshlayout.ShowGravity;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.ShowGravity;
 import com.banketree.refresh.widget.NestedFrameLayout;
 
 

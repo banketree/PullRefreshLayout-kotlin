@@ -3,7 +3,7 @@ package com.banketree.refresh.widget;
 import android.content.Context;
 import android.view.View;
 
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
 
 /**
  * Created by yan on 2017/9/16.

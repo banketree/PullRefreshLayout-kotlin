@@ -16,9 +16,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
-import com.banketree.pullrefreshlayout.ShowGravity;
-import com.banketree.pullrefreshlayout.ViscousInterpolator;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.ShowGravity;
+import com.yan.pullrefreshlayout.ViscousInterpolator;
 import com.banketree.refresh.R;
 import com.wang.avi.AVLoadingIndicatorView;
 

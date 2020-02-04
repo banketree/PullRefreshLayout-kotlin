@@ -12,7 +12,7 @@
         android:src="@drawable/top_bg"
         app:layout_collapseMode="parallax" />
 
-    <com.banketree.pullrefreshlayout.PullRefreshLayout
+    <com.yan.pullrefreshlayout.PullRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -210,7 +210,7 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-    </com.banketree.pullrefreshlayout.PullRefreshLayout>
+    </com.yan.pullrefreshlayout.PullRefreshLayout>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

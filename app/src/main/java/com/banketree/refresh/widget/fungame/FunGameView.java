@@ -10,8 +10,8 @@ import android.view.WindowManager;
 
 import androidx.core.content.ContextCompat;
 
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.PRLCommonUtils;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.R;
 
 /**

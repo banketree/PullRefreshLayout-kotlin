@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.banketree.pullrefreshlayout.PullRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.yan.pullrefreshlayout.PullRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/prl"
     android:layout_width="match_parent"
@@ -187,4 +187,4 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </ScrollView>
-</com.banketree.pullrefreshlayout.PullRefreshLayout>
+</com.yan.pullrefreshlayout.PullRefreshLayout>

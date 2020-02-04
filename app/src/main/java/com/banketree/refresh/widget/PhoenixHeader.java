@@ -13,8 +13,8 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.Transformation;
 
-import com.banketree.pullrefreshlayout.PRLCommonUtils;
-import com.banketree.pullrefreshlayout.PullRefreshLayout;
+import com.yan.pullrefreshlayout.PRLCommonUtils;
+import com.yan.pullrefreshlayout.PullRefreshLayout;
 import com.banketree.refresh.widget.pathview.PathsDrawable;
 
 /**
